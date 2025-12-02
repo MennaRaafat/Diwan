@@ -35,7 +35,7 @@
 
                 <!-- Desktop Menu -->
                 <ul class="hidden md:flex gap-8 text-gray-700 font-medium">
-                    <li><a href="#" class="hover:text-indigo-700">الرئيسية</a></li>
+                    <li><a href="{{url('/')}}" class="hover:text-indigo-700">الرئيسية</a></li>
                     <li class="relative">
                         <button id="services-btn" class="hover:text-indigo-700 flex items-center gap-1 select-none">
                         الخدمات ▾
@@ -51,9 +51,9 @@
 
                         </div>
                     </li>
-                    <li><a href="{{url('about-us')}}" class="hover:text-indigo-700">نبذة عن ديوان</a></li>
+                    <li><a href="{{url('about-us')}}" class="hover:text-indigo-700">من نحن</a></li>
                     <li><a href="{{url('/important-links')}}" class="hover:text-indigo-700">روابط هامة</a></li>
-                    <li><a href="{{url('/jobs')}}" class="hover:text-indigo-700">التوظيف</a></li>
+                    <li><a href="{{url('/jobs')}}" class="hover:text-indigo-700">انضم الينا</a></li>
                     <li><a href="{{url('/contact-us')}}" class="hover:text-indigo-700">تواصل معنا</a></li>
                 </ul>
 
@@ -103,16 +103,21 @@
                 <div>
                     <h4 class="text-lg font-semibold text-white mb-4">الخدمات</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">خدمة 1</a></li>
-                        <li><a href="#" class="hover:text-white">خدمة 2</a></li>
+                            <li><a href="{{ url('/services/audit')}}" class="hover:text-white">خدمات المراجعة</a></li>
+                            <li><a href="{{ url('/services/accounting')}}" class="hover:text-white">خدمات المحاسبة وامساك الدفاتر</a></li>
+                            <li><a href="{{ url('/services/tax')}}" class="hover:text-white">خدمات الضرائب</a></li>
+                            <li><a href="{{ url('/services/finance-consulting')}}" class="hover:text-white">خدمات الاستشارات المالية</a></li>
+                            <li><a href="{{ url('/services/management-consultancy')}}" class="hover:text-white">خدمات الاستشارات الإدارية</a></li>
+                            <li><a href="{{ url('/services/inventory-and-census')}}" class="hover:text-white">خدمات الحصر والجرد</a></li>
+                            <li><a href="{{ url('/services/tax')}}" class="hover:text-white">خدمات الضرائب</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="text-lg font-semibold text-white mb-4">تواصل معنا</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">الاستفسارات</a></li>
-                        <li><a href="#" class="hover:text-white">الدعم الفني</a></li>
+                        <li><a href="{{url('/contact-us')}}" class="hover:text-white">الاستفسارات</a></li>
+                        <li><a href="{{url('/request-service')}}" class="hover:text-white">طلب خدمه</a></li>
                     </ul>
                 </div>
             </div>

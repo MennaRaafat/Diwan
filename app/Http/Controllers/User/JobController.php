@@ -26,17 +26,50 @@ class JobController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'phone' => 'required|string|max:50',
-            'job_name' => 'required|string|max:255',
-            'exprience' => 'nullable|string|max:2000',
-            'cover_letter' => 'nullable|string|max:2000',
-            'major' => 'required|string|max:255',
-            'job_type_id' => 'required|exists:job_types,id',
-            'cv' => 'required|file|mimes:pdf|max:5120',
-        ]);
+        $validated = $request->validate(
+            [
+                'name' => 'required|string|max:255',
+                'email' => 'required|email|max:255',
+                'phone' => 'required|string|max:50',
+                'exprience' => 'required|string|max:2000',
+                'cover_letter' => 'required|string|max:2000',
+                'major' => 'required|string|max:255',
+                'job_type_id' => 'required|exists:job_types,id',
+                'cv' => 'required|file|mimes:pdf|max:5120',
+            ],
+            [
+
+                'name.required' => 'الاسم مطلوب.',
+                'name.string' => 'الاسم يجب أن يكون نصاً.',
+                'name.max' => 'الاسم يجب ألا يتجاوز 255 حرفاً.',
+
+                'email.required' => 'البريد الإلكتروني مطلوب.',
+                'email.email' => 'يجب إدخال بريد إلكتروني صالح.',
+                'email.max' => 'البريد الإلكتروني يجب ألا يتجاوز 255 حرفاً.',
+
+                'phone.required' => 'رقم الهاتف مطلوب.',
+                'phone.string' => 'رقم الهاتف يجب أن يكون نصاً.',
+                'phone.max' => 'رقم الهاتف يجب ألا يتجاوز 50 حرفاً.',
+
+                'exprience.string' => 'سنوات الخبرة يجب أن تكون نصاً.',
+                'exprience.max' => 'سنوات الخبرة يجب ألا تتجاوز 2000 حرف.',
+
+                'cover_letter.string' => 'رسالة الغلاف يجب أن تكون نصاً.',
+                'cover_letter.max' => 'رسالة الغلاف يجب ألا تتجاوز 2000 حرف.',
+
+                'major.required' => 'التخصص مطلوب.',
+                'major.string' => 'التخصص يجب أن يكون نصاً.',
+                'major.max' => 'التخصص يجب ألا يتجاوز 255 حرفاً.',
+
+                'job_type_id.required' => 'نوع الوظيفة مطلوب.',
+                'job_type_id.exists' => 'نوع الوظيفة غير موجود.',
+
+                'cv.required' => 'السيرة الذاتية مطلوبة.',
+                'cv.file' => 'يجب رفع ملف صحيح.',
+                'cv.mimes' => 'يجب أن تكون السيرة الذاتية بصيغة PDF فقط.',
+                'cv.max' => 'حجم السيرة الذاتية يجب ألا يتجاوز 5 ميجابايت.',
+            ]
+        );
 
         if ($request->hasFile('cv')) {
             $file = $request->file('cv');

@@ -6,7 +6,7 @@ use App\Http\Controllers\User\ServiceController;
 use App\Http\Controllers\User\JobController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('animated-home');
 });
 
 
