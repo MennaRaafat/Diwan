@@ -27,9 +27,8 @@
         <!-- Navbar -->
         <nav class="fixed w-full top-0 bg-white/80 backdrop-blur border-b border-gray-200 z-50 shadow-sm">
             <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-                <a href="#" class="flex items-center gap-2">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-7" />
-                <span class="text-2xl font-bold text-indigo-900">ديوان</span>
+                <a href="{{url('/')}}" class="flex items-center gap-2">
+                    <img src="{{ asset('assets/images/logo.JPG') }}" class="h-10" />
                 </a>
 
 
@@ -97,6 +96,9 @@
             <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
                 <div>
                     <h3 class="text-xl font-bold text-white mb-4">ديوان</h3>
+                    {{-- <a href="{{url('/')}}" class="flex items-center gap-2">
+                        <img src="{{ asset('assets/images/logo.JPG') }}" class="h-7" />
+                    </a>      --}}
                     <p class="leading-relaxed text-gray-400 text-sm">نقدم لك أفضل الحلول المحاسبية والضريبية بخبرة تزيد عن 18 عاماً.</p>
                 </div>
 

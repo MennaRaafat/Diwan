@@ -21,7 +21,7 @@ class ServiceController extends Controller
                 'name' => 'required|string|max:255',
                 'email' => 'required|email|max:255',
                 'company_name' => 'required|string|max:255',
-                'phone' => 'required|string|max:50',
+                'phone' => ['required', 'regex:/^(10|11|12|15)[0-9]{8}$/'],
                 'service_type_id' => 'required|exists:service_types,id',
                 'service_description' => 'required|string|max:1000',
             ],
@@ -39,8 +39,7 @@ class ServiceController extends Controller
                 'company_name.max' => 'حقل اسم الشركة لا يجب أن يزيد عن 255 حرفًا.',
 
                 'phone.required' => 'حقل رقم الهاتف مطلوب.',
-                'phone.string' => 'حقل رقم الهاتف يجب أن يكون نصًا.',
-                'phone.max' => 'حقل رقم الهاتف لا يجب أن يزيد عن 50 حرفًا.',
+                'phone.regex' => 'قم الهاتف غير صالح. يجب أن يكون رقمًا مصريًا.',
 
                 'service_type_id.required' => 'حقل نوع الخدمة مطلوب.',
                 'service_type_id.exists' => 'نوع الخدمة المحدد غير موجود.',
@@ -50,6 +49,8 @@ class ServiceController extends Controller
                 'service_description.max' => 'حقل وصف الخدمة لا يجب أن يزيد عن 1000 حرف.',
             ]
         );
+
+        $validated['phone'] = '+20' . $validated['phone'];
 
         ServiceRequest::create($validated);
 

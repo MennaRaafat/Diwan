@@ -1,59 +1,77 @@
 @extends('layouts.layout')
 
+@push('styles')
+    <style>
+        .wrapper{
+            display:grid;
+            place-items:center
+        }
+    </style>
+@endpush
+
 @section('content')
 
-    <section class="w-full max-w-7xl mx-auto mt-20 px-4">
+    <section class="w-full max-w-7xl mx-auto mt-20 px-6">
 
-        <div class="py-8 lg:py-16 px-4 mx-auto w-full">
-            <h2 class="mb-4 tracking-tight font-extrabold text-center text-4xl font-bold text-indigo-800 mb-3">تواصل معنا</h2>
-            <p class="mb-8 lg:mb-16 font-light text-center text-gray-900 sm:text-xl">
-                هل تواجه مشكلة تقنية؟ ترغب في إرسال ملاحظات حول ميزة تجريبية؟ تحتاج إلى معلومات حول خطط الأعمال لدينا؟ أخبرنا وسنكون سعداء بمساعدتك.
-            </p>
 
-            <form action="{{url('/contact-us')}}" method="POST" class="space-y-8">
-                @csrf
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900">الاسم كامل</label>
-                        <input type="text" id="name" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Menna Raafat"                    value="{{ old('name') }}" required>
-                    </div>
-
-                    <div>
-                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">البريد الالكتروني</label>
-                        <input type="email" id="email" name="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@flowbite.com" value="{{ old('email') }}" required>
-                    </div>
-
-                    <div>
-                        <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">رقم الهاتف</label>
-                        <input type="phone" id="phone" name="phone" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="01287637994" value="{{ old('phone') }}" required>
-                    </div>
-
-                    <div>
-                    <label for="topic" class="block mb-2 text-sm font-medium text-gray-900">موضوع الاستفسار</label>
-                    <input type="text" id="topic" name="topic" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Menna Raafat" value="{{ old('topic') }}" required>
-                    </div>
-
-                    <div>
-                    <label for="inquiry_type_id" class="block mb-2 text-sm font-medium text-gray-900">نوع الاستفسار (اختار نوع الاستفسار)</label>
-                    <select id="inquiry_type_id" name="inquiry_type_id" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Menna Raafat" required>
-                        @foreach ($inquiryTypes as $inquiryType)
-                            <option value="{{$inquiryType->id}}" {{ old('inquiry_type_id') == $inquiryType->id ? 'selected' : '' }}>{{$inquiryType->name}}</option>
-                        @endforeach
-                    </select>
-                    </div>
-                    
-                    <div>
-                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900">اكتب سؤالك او استفسارك بالتفصيل هنا</label>
-                        <textarea id="message" name="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="اكتب سؤالك او استفسارك بالتفصيل هنا">{{ old('message') }}</textarea>
+        <div class="wrapper bg-white antialiased text-gray-900">
+            <div class="py-6">
+            
+                <img src="{{asset('assets/images/company.jpg')}}" alt=" random imgee" class="w-screen h-64 object-cover object-center">    
+            
+                <div class="relative px-4 -mt-16  ">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-semibold mb-2">ديوان</h2>
+                        <p>المقطم</p>
+                        <p dir="rtl"> <span dir="ltr">+20 123 456 7890</span></p>
+                        <p>info@mycompany.com</p>
                     </div>
                 </div>
-                <div class="text-center mt-5">
-                    <button type="submit" class="py-3 px-6 text-sm font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                        ارسال الطلب
-                    </button>
-                </div>
+                
+            </div>
+        </div>
 
-            </form>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
+
+            {{-- Card 1 --}}
+            <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="bg-blue-500 text-white rounded-full p-4">
+                        <!-- Icon: chat/inquiries -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4-.84L3 20l.84-4A9.863 9.863 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                    </div>
+                </div>
+                <h2 class="text-xl font-semibold mb-2 text-gray-800">الاستفسارات</h2>
+                <p class="text-gray-600 mb-4">يمكنك إرسال استفساراتك هنا وسنقوم بالرد عليك في أقرب وقت.</p>
+                <a href="{{ url('/inquiry') }}" 
+                class="inline-block mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                الذهاب إلى صفحة الاستفسارات
+                </a>
+            </div>
+
+            {{-- Card 2 --}}
+            <div class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
+               <div class="flex items-center justify-center mb-4">
+                    <div class="bg-green-500 text-white rounded-full p-4">
+                        <!-- Icon: service request -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 17v-6a2 2 0 012-2h2a2 2 0 012 2v6m4 0H5m4 0v4m4-4v4"/>
+                        </svg>
+                    </div>
+                </div>
+                <h2 class="text-xl font-semibold mb-2 text-gray-800">طلب خدمة</h2>
+                <p class="text-gray-600 mb-4">يمكنك طلب الخدمات التي نقدمها عبر هذه الصفحة بسهولة وسرعة.</p>
+                <a href="{{ url('/request-service') }}" 
+                class="inline-block mt-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
+                الذهاب إلى طلب الخدمة
+                </a>
+            </div>
         </div>
 
     </section>

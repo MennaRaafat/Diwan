@@ -26,7 +26,21 @@
 
                     <div>
                         <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">رقم الهاتف</label>
-                        <input type="phone" id="phone" name="phone" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="01287637994" value="{{ old('phone')}}" required>
+                        <div class="flex items-center gap-2">
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+                                    focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                placeholder="12 876 37994" 
+                                value="{{ old('phone') }}"
+                                required
+                            >
+                            <span class="px-3 py-2 bg-gray-200 border border-gray-300 rounded-lg text-gray-700">
+                                20+
+                            </span>
+                        </div>
                     </div>
 
                     <div>

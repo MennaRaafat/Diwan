@@ -30,7 +30,7 @@ class JobController extends Controller
             [
                 'name' => 'required|string|max:255',
                 'email' => 'required|email|max:255',
-                'phone' => 'required|string|max:50',
+                'phone' => ['required', 'regex:/^(10|11|12|15)[0-9]{8}$/'],
                 'exprience' => 'required|string|max:2000',
                 'cover_letter' => 'required|string|max:2000',
                 'major' => 'required|string|max:255',
@@ -48,8 +48,7 @@ class JobController extends Controller
                 'email.max' => 'البريد الإلكتروني يجب ألا يتجاوز 255 حرفاً.',
 
                 'phone.required' => 'رقم الهاتف مطلوب.',
-                'phone.string' => 'رقم الهاتف يجب أن يكون نصاً.',
-                'phone.max' => 'رقم الهاتف يجب ألا يتجاوز 50 حرفاً.',
+                'phone.regex' => 'قم الهاتف غير صالح. يجب أن يكون رقمًا مصريًا.',
 
                 'exprience.string' => 'سنوات الخبرة يجب أن تكون نصاً.',
                 'exprience.max' => 'سنوات الخبرة يجب ألا تتجاوز 2000 حرف.',
@@ -78,6 +77,8 @@ class JobController extends Controller
 
             $validated['cv'] = $path;
         }
+
+        $validated['phone'] = '+20' . $validated['phone'];
 
         JobRequest::create($validated);
 
