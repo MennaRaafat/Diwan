@@ -13,7 +13,9 @@ Route::get('/', function () {
 Route::view('/important-links', 'important-links');
 Route::view('/about-us', 'about-us');
 
-Route::get('/contact-us', [InquiryController::class, 'create']);
+Route::view('/contact-us', 'contact.contact-us');
+
+Route::get('/inquiry', [InquiryController::class, 'create']);
 Route::post('/contact-us', [InquiryController::class, 'store']);
 
 Route::get('/request-service', [ServiceController::class, 'create']);
