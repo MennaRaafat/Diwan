@@ -28,7 +28,7 @@
         <nav class="fixed w-full top-0 bg-white/80 backdrop-blur border-b border-gray-200 z-50 shadow-sm">
             <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                 <a href="{{url('/')}}" class="flex items-center gap-2">
-                    <img src="{{ asset('assets/images/logo.JPG') }}" class="h-10" />
+                    <img src="{{ asset('assets/images/logo.png') }}" class="h-10" />
                 </a>
 
 
@@ -99,7 +99,7 @@
                     {{-- <a href="{{url('/')}}" class="flex items-center gap-2">
                         <img src="{{ asset('assets/images/logo.JPG') }}" class="h-7" />
                     </a>      --}}
-                    <p class="leading-relaxed text-gray-400 text-sm">نقدم لك أفضل الحلول المحاسبية والضريبية بخبرة تزيد عن 18 عاماً.</p>
+                    <p class="leading-relaxed text-gray-400 text-sm">نقدم لك أفضل الحلول المحاسبية والضريبية بخبرة أكثر من 20 عاماً.</p>
                 </div>
 
                 <div>

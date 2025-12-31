@@ -10,17 +10,17 @@
 
             <!-- Slide 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1600" class="w-full h-full object-cover" />
+                <img src="{{asset('assets/images/carasoul-1.jpeg')}}" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 bg-black/40"></div>
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-20 px-6">
                     <h1 class="text-4xl md:text-5xl font-bold mb-4">حلول محاسبية وضريبية متكاملة</h1>
-                    <p class="max-w-2xl text-lg opacity-90">خبراء يقدمون لك أفضل الخدمات المهنية لدعم أعمالك منذ عام 2006</p>
+                    <p class="max-w-2xl text-lg opacity-90">خبراء يقدمون لك أفضل الخدمات المهنية لدعم أعمالك منذ أكثر من 20 عاماً</p>
                 </div>
             </div>
 
             <!-- Slide 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600" class="w-full h-full object-cover" />
+                <img src="{{asset('assets/images/carasoul-2.jpeg')}}" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 bg-black/40"></div>
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-20 px-6">
                     <h1 class="text-4xl md:text-5xl font-bold mb-4">خدمات تدقيق احترافية</h1>
@@ -30,7 +30,7 @@
 
             <!-- Slide 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600" class="w-full h-full object-cover" />
+                <img src="{{asset('assets/images/carasoul-3.jpeg')}}" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 bg-black/40"></div>
                 <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-20 px-6">
                     <h1 class="text-4xl md:text-5xl font-bold mb-4">استشارات مالية وإدارية</h1>
@@ -54,8 +54,10 @@
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-3xl font-bold text-indigo-800 mb-6">نبذة عن ديوان</h2>
             <p class="text-gray-600 leading-relaxed text-lg">
-                يعتبر مكتب ديوان للحلول المحاسبية والضريبية مقدم مميز للخدمات المهنية للشركات في مجالات دعم الأعمال مثل المراجعة والمحاسبة والضرائب والخدمات الإدارية والاستشارية.
-                تأسس المكتب عام 2006 ملتزماً بأعلى معايير الجودة والشفافية لضمان نجاح العملاء.
+                يعتبر مكتب ديوان للحلول المحاسبية والضريبية مقدم مميز للخدمات المهنية للشركات في مجالات دعم الأعمال مثل خدمات المراجعة والمحاسبة والضرائب والخدمات الإدارية والاستشارية الأخرى، مع فريق من الخبراء والاستشاريون بخبرات واسعة في تقديم الخدمات المهنية المتخصصة.                  
+            </p>
+            <p class="text-gray-600 leading-relaxed text-lg">
+                تم إنشاء مكتب ديوان للحلول المحاسبية والضريبية ليكون امتداد لخبره مهنيه تمتد اكثر من 20 عام حيث نقوم بتقديم أعلى معايير الجودة والشفافية في جميع خدماتنا لضمان نجاح عملائنا وتحقيق أهدافهم.
             </p>
         </div>
     </section>
@@ -67,13 +69,13 @@
                 <img src="https://plus.unsplash.com/premium_photo-1683880731792-39c07ceea617?q=80&w=800" class="rounded-xl shadow-xl" />
 
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-8">نحن أفضل وكالة محاسبة</h2>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8"> افضل الخدمات المقدمه اليكم</h2>
 
                     <div class="space-y-5">
                         <div class="flex items-start gap-4">
                             <div class="w-12 h-12 bg-indigo-700 text-white rounded-full flex items-center justify-center text-xl">📊</div>
                             <div>
-                                <h3 class="text-lg font-semibold">خدمات التدقيق</h3>
+                                <h3 class="text-lg font-semibold">خدمات المراجعه (التدقيق)</h3>
                                 <p class="text-gray-500">تعزيز الثقة في القرارات من خلال تحليل البيانات المالية وغير المالية.</p>
                             </div>
                         </div>

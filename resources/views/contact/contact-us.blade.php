@@ -21,10 +21,11 @@
             
                 <div class="relative px-4 -mt-16  ">
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <h2 class="text-xl font-semibold mb-2">ديوان</h2>
-                        <p>المقطم</p>
-                        <p dir="rtl"> <span dir="ltr">+20 123 456 7890</span></p>
-                        <p>info@mycompany.com</p>
+                        <h2 class="text-xl font-semibold mb-2">ديوان للحلول المحاسبية والضريبية</h2>
+                        <p>شقة 2 - دور 1 - عمارة 9110 - شارع 9 - المقطم - القاهرة.</p>
+                        <p dir="rtl"> الرمز البريدي: <span dir="ltr">4413430</span></p>
+                        <p dir="rtl"> ت. أرضي: <span dir="ltr">0225080284</span></p>
+                        <p dir="rtl">موبايل : <span dir="ltr">01104362336</span></p>
                     </div>
                 </div>
                 

@@ -39,17 +39,17 @@
 
                 <!-- Slide 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1600" class="w-full h-full object-cover" />
+                    <img src="{{asset('assets/images/carasoul-1.jpeg')}}" class="w-full h-full object-cover" />
                     <div class="absolute inset-0 bg-black/40"></div>
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-20 px-6">
                         <h1 class="text-4xl md:text-5xl font-bold mb-4">حلول محاسبية وضريبية متكاملة</h1>
-                        <p class="max-w-2xl text-lg opacity-90">خبراء يقدمون لك أفضل الخدمات المهنية لدعم أعمالك منذ عام 2006</p>
+                        <p class="max-w-2xl text-lg opacity-90">خبراء يقدمون لك أفضل الخدمات المهنية لدعم أعمالك بخبره مهنيه تمتد اكثر من 20 عام</p>
                     </div>
                 </div>
 
                 <!-- Slide 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600" class="w-full h-full object-cover" />
+                    <img src="{{asset('assets/images/carasoul-2.jpeg')}}" class="w-full h-full object-cover" />
                     <div class="absolute inset-0 bg-black/40"></div>
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-20 px-6">
                         <h1 class="text-4xl md:text-5xl font-bold mb-4">خدمات تدقيق احترافية</h1>
@@ -59,7 +59,7 @@
 
                 <!-- Slide 3 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1600" class="w-full h-full object-cover" />
+                    <img src="{{asset('assets/images/carasoul-3.jpeg')}}" class="w-full h-full object-cover" />
                     <div class="absolute inset-0 bg-black/40"></div>
                     <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-20 px-6">
                         <h1 class="text-4xl md:text-5xl font-bold mb-4">استشارات مالية وإدارية</h1>
