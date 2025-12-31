@@ -148,6 +148,15 @@
             <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ url('admin/inquiries') }}" :active="request()->routeIs('inquiries')">
+                {{ __('Inquiries') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ url('admin/services') }}" :active="request()->routeIs('services')">
+                {{ __('Services Requests') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ url('admin/jobs') }}" :active="request()->routeIs('jobs')">
+                {{ __('Jobs') }}
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
