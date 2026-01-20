@@ -17,9 +17,14 @@
                 <p><strong>Education:</strong> {{ $job->major }}</p>
                 <p><strong>Job Type:</strong> {{ optional($job->type)->name }}</p>
                 <p><strong>Cv:</strong> 
-                    <a href="{{ asset('storage/' . $job->cv) }}" target="_blank" class="text-indigo-600 hover:underline">
+                    {{-- <a href="{{ asset('storage/' . $job->cv) }}" target="_blank" class="text-indigo-600 hover:underline">
                         View Cv 
-                    </a>
+                    </a> --}}
+                    @php
+                        $cv = basename($job->cv);
+                    @endphp
+                    <a href="{{ route('download.cv', $cv) }}" class="text-blue-600 underline">{{ $cv }}</a>
+
                 </p>
                 <p><strong>Applied Date:</strong> {{ $job->created_at->format('Y-m-d H:i') }}</p>
             </div>

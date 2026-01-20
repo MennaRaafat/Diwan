@@ -84,4 +84,16 @@ class JobController extends Controller
 
         return redirect()->back()->with('success', 'تم تقديم طلبك بنجاح. سنتواصل معك قريبًا.');
     }
+
+    public function downloadCv($filePath)
+    {
+        $path = storage_path('app/public/cv_files/' . $filePath);
+
+        if (!file_exists($path)) {
+            abort(404);
+        }
+
+        return response()->download($path);
+    }
+
 }

@@ -48,5 +48,6 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('/services', [App\Http\Controllers\Admin\ServiceController::class, 'index'])->name('services');
     Route::get('/jobs', [App\Http\Controllers\Admin\JobController::class, 'index'])->name('jobs');
     Route::get('/jobs/{job}', [App\Http\Controllers\Admin\JobController::class, 'view'])->name('admin.jobs.view');
+    Route::get('/download/cv/{filePath}', [JobController::class, 'downloadCv'])->name('download.cv');
 
 });
