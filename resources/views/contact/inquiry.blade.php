@@ -15,7 +15,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">الاسم كامل</label>
-                        <input type="text" id="name" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Menna Raafat"                    value="{{ old('name') }}" required>
+                        <input type="text" id="name" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Ibrahim Ahmed" value="{{ old('name') }}" required>
                     </div>
 
                     <div>
@@ -32,7 +32,7 @@
                                 name="phone" 
                                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
                                     focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                placeholder="12 876 37994" 
+                                placeholder="10 647 64999" 
                                 value="{{ old('phone') }}"
                                 required
                             >
@@ -44,12 +44,12 @@
 
                     <div>
                     <label for="topic" class="block mb-2 text-sm font-medium text-gray-900">موضوع الاستفسار</label>
-                    <input type="text" id="topic" name="topic" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Menna Raafat" value="{{ old('topic') }}" required>
+                    <input type="text" id="topic" name="topic" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="الضرائب" value="{{ old('topic') }}" required>
                     </div>
 
                     <div>
                     <label for="inquiry_type_id" class="block mb-2 text-sm font-medium text-gray-900">نوع الاستفسار (اختار نوع الاستفسار)</label>
-                    <select id="inquiry_type_id" name="inquiry_type_id" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Menna Raafat" required>
+                    <select id="inquiry_type_id" name="inquiry_type_id" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="" required>
                         @foreach ($inquiryTypes as $inquiryType)
                             <option value="{{$inquiryType->id}}" {{ old('inquiry_type_id') == $inquiryType->id ? 'selected' : '' }}>{{$inquiryType->name}}</option>
                         @endforeach

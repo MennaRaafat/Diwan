@@ -15,7 +15,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">الاسم كامل</label>
-                        <input type="text" id="name" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Menna Raafat" value="{{old('name')}}" required>
+                        <input type="text" id="name" name="name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Ibrahim Ahmed" value="{{old('name')}}" required>
                     </div>
 
                     <div>
@@ -32,7 +32,7 @@
                                 name="phone" 
                                 class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
                                     focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                placeholder="12 876 37994" 
+                                placeholder="10 647 64999" 
                                 value="{{ old('phone') }}"
                                 required
                             >
@@ -44,12 +44,12 @@
 
                     <div>
                     <label for="company_name" class="block mb-2 text-sm font-medium text-gray-900">اسم الشركة</label>
-                    <input type="text" id="company_name" name="company_name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Menna Raafat" value="{{old('company_name')}}" required>
+                    <input type="text" id="company_name" name="company_name" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Diwan Company" value="{{old('company_name')}}" required>
                     </div>
 
                     <div>
                     <label for="service_type_id" class="block mb-2 text-sm font-medium text-gray-900">نوع خدمه المطلوبة (اختار الخدمة)</label>
-                    <select id="service_type_id" name="service_type_id" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Menna Raafat" required>
+                    <select id="service_type_id" name="service_type_id" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="" required>
                         @foreach ($serviceTypes as $serviceType)
                             <option value="{{$serviceType->id}}" {{ old('service_type_id') == $serviceType->id ? 'selected' : '' }}>{{$serviceType->name}}</option>
                         @endforeach
