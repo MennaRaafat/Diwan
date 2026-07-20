@@ -60,34 +60,49 @@
             <h2 class="text-3xl font-bold text-indigo-800 mb-6">العضويات المهنية</h2>
 
             <ul class="space-y-3">
-                <li class="flex items-center justify-start gap-2 text-gray-700 text-lg">
+                <!-- <li class="flex items-center justify-start gap-2 text-gray-700 text-lg">
                     <span class="text-indigo-700 text-lg">◄</span>       
                     <span>سجل المحاسبين والمراجعين المصريين.</span>
+                </li> -->
+
+                <li class="flex items-center justify-start gap-2 text-gray-700 text-lg">
+                    <span class="text-indigo-700 text-lg">◄</span>       
+                    <span>الهيئة العامة للرقابة المالية</span>
                 </li>
 
                 <li class="flex items-center justify-start gap-2 text-gray-700 text-lg">
                     <span class="text-indigo-700 text-lg">◄</span>       
-                    <span>الهيئة العامة للرقابة المالية.</span>
+                    <span>جمعية المحاسبين والمراجعين المصرية</span>
+                </li>
+                
+                <li class="flex items-center justify-start gap-2 text-gray-700 text-lg">
+                    <span class="text-indigo-700 text-lg">◄</span>       
+                    <span>الجمعية المصرية للمحاسبين والمراجعين القانونيين</span>
+                </li>                
+                
+                <li class="flex items-center justify-start gap-2 text-gray-700 text-lg">
+                    <span class="text-indigo-700 text-lg">◄</span>       
+                    <span>الجمعية العلمية للتشريع الضريبي</span>
+                </li>                
+                
+                <li class="flex items-center justify-start gap-2 text-gray-700 text-lg">
+                    <span class="text-indigo-700 text-lg">◄</span>       
+                    <span>اتحاد المحاسبين والمراجعين العرب</span>
                 </li>
 
                 <li class="flex items-center justify-start gap-2 text-gray-700 text-lg">
                     <span class="text-indigo-700 text-lg">◄</span>       
-                    <span>جمعية المحاسبين والمراجعين المصرية.</span>
+                    <span>جمعية الضرائب المصرية</span>
                 </li>
 
                 <li class="flex items-center justify-start gap-2 text-gray-700 text-lg">
                     <span class="text-indigo-700 text-lg">◄</span>       
-                    <span>جمعية الضرائب المصرية.</span>
+                    <span>الجمعية المصرية للمالية العامة والضرائب</span>
                 </li>
 
                 <li class="flex items-center justify-start gap-2 text-gray-700 text-lg">
                     <span class="text-indigo-700 text-lg">◄</span>       
-                    <span>الجمعية المصرية للمالية العامة والضرائب.</span>
-                </li>
-
-                <li class="flex items-center justify-start gap-2 text-gray-700 text-lg">
-                    <span class="text-indigo-700 text-lg">◄</span>       
-                    <span>جمعية المحاسبين القانونين العربية.</span>
+                    <span>جمعية المحاسبين القانونين العربية</span>
                 </li>
             </ul>
         </div>
